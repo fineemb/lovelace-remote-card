@@ -4,7 +4,7 @@
  * @Description   : 
  * @Date          : 2019-10-28 16:19:56
  * @LastEditors   : fineemb
- * @LastEditTime  : 2019-10-31 01:56:57
+ * @LastEditTime  : 2019-10-31 03:14:09
  */
 const locale = {
 }
@@ -27,9 +27,11 @@ class RemoteCard extends Polymer.Element {
                 --button-shadow-color:#00bcd4;
             }
             .box {
-                padding: 10px;
+                padding: 5px;
                 overflow: hidden;
                 flex:1.25;
+                display: flex;
+                align-items: center;
             }
             .boxb {
                 flex:0.75;
@@ -114,8 +116,6 @@ class RemoteCard extends Polymer.Element {
                 margin: 47%;
             }
             .ficon{
-                position: relative;
-                display: inline-block;
                 width: 100%;
                 color: #FFFFFF;
                 height: 100%;
@@ -139,6 +139,8 @@ class RemoteCard extends Polymer.Element {
             .left_buttons {
                 display: flex;
                 flex-wrap: wrap;
+                align-content: center;
+                min-height: 100%;
             }
             paper-button {
                 text-align: center;
