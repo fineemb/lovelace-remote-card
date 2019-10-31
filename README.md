@@ -58,7 +58,7 @@ resources:
                           payload: "volmax"
                           icon: mdi:volume-plus
 ```
-##属性
+## 属性
 
 - `circle` 可以使用`mqtt`和`script`,格式严格按照示例
   * `up` 上 
