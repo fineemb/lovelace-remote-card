@@ -4,7 +4,7 @@
  * @Description   : 
  * @Date          : 2019-10-28 16:19:56
  * @LastEditors   : fineemb
- * @LastEditTime  : 2019-10-31 03:14:09
+ * @LastEditTime  : 2019-11-17 20:40:30
  */
 const locale = {
 }
@@ -309,6 +309,8 @@ class RemoteCard extends Polymer.Element {
             var data = {}
                 data.topic = id.topic;
                 data.payload = id.payload;
+                data.qos = 2;
+                data.retain = true;
             this.hass.callService("mqtt", "publish", data)
             navigator.vibrate(100)
         }else if(typeof id === "string"){
