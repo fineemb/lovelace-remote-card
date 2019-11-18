@@ -9,7 +9,7 @@ lovelace-remote-card
 
 ```yaml
 resources:
-  url: /community_plugin/lovelace-remote/remote.js
+  url: /community_plugin/lovelace-remote/remote-card.js
   type: js
 ```
 ![slider-entity-row](https://raw.githubusercontent.com/fineemb/lovelace-remote-card/d6561e8724a15359ef5044478a3b2346c37ae4cb/01.gif)
