@@ -1,5 +1,4 @@
 {
     "name": "通用电视/机顶盒卡片",
-    "render_readme": true,
-    "filename": "remote.js"
+    "render_readme": true
   }
