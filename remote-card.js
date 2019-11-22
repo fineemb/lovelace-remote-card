@@ -310,7 +310,7 @@ class RemoteCard extends Polymer.Element {
                 data.topic = id.topic;
                 data.payload = id.payload;
                 data.qos = 2;
-                data.retain = true;
+                data.retain = false;
             this.hass.callService("mqtt", "publish", data)
             navigator.vibrate(100)
         }else if(typeof id === "string"){
