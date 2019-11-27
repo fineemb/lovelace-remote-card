@@ -4,7 +4,7 @@
  * @Description   : 
  * @Date          : 2019-10-28 16:19:56
  * @LastEditors   : fineemb
- * @LastEditTime  : 2019-11-27 11:45:18
+ * @LastEditTime  : 2019-11-27 17:43:44
  */
 const locale = {
 }
@@ -33,11 +33,11 @@ class RemoteCard extends Polymer.Element {
                 flex:1.25;
                 display: flex;
                 align-items: center;
-                min-width: 195px;
+                min-width: 190px;
             }
             .boxb {
                 flex:1;
-                min-width: 140px;
+                min-width: 145px;
             }
             .scale {
                 width: 100%;
