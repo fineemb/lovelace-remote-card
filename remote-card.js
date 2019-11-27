@@ -4,7 +4,7 @@
  * @Description   : 
  * @Date          : 2019-10-28 16:19:56
  * @LastEditors   : fineemb
- * @LastEditTime  : 2019-11-17 20:40:30
+ * @LastEditTime  : 2019-11-27 11:45:18
  */
 const locale = {
 }
@@ -15,6 +15,7 @@ class RemoteCard extends Polymer.Element {
             .remote_f{
                 display:flex;
                 flex-wrap: wrap;
+                justify-content: center;
             }
             .f-ha-card{
                 padding: 1pc;
@@ -32,11 +33,11 @@ class RemoteCard extends Polymer.Element {
                 flex:1.25;
                 display: flex;
                 align-items: center;
+                min-width: 195px;
             }
             .boxb {
-                flex:0.75;
+                flex:1;
                 min-width: 140px;
-                margin-left: 15px;
             }
             .scale {
                 width: 100%;
@@ -141,12 +142,13 @@ class RemoteCard extends Polymer.Element {
                 flex-wrap: wrap;
                 align-content: center;
                 min-height: 100%;
+                justify-content: center;
             }
             paper-button {
                 text-align: center;
                 padding: 5px;
                 border-radius: 50%;
-                margin: 8px;
+                margin: 10px;
                 color: var(--accent-color);
                 box-shadow: var(--box-shadow);
                 box-sizing: border-box;
@@ -168,9 +170,12 @@ class RemoteCard extends Polymer.Element {
                 vertical-align: middle;
                 border-radius: 50%;
             }
+            .not_home .lbicon {
+                color: var(--state-color-off);
+            }
         </style>
         <ha-card class="f-ha-card">
-            <div class="remote_f">
+            <div class$="remote_f  [[getDstate(hass, config.entity)]]">
                 <div class="box">
                 <div class="scale">
                 <div class="button-group">
@@ -254,6 +259,9 @@ class RemoteCard extends Polymer.Element {
         return false;    
     }
 
+    getDstate(hass, entity) {
+        return hass.states[entity].state;
+    }
     getstate(hass, entity) {
         return hass.states[entity]
     }
