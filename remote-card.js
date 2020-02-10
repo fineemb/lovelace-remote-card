@@ -4,7 +4,7 @@
  * @Description   : 
  * @Date          : 2019-10-28 16:19:56
  * @LastEditors   : fineemb
- * @LastEditTime  : 2019-11-27 17:43:44
+ * @LastEditTime  : 2020-02-10 18:49:45
  */
 const locale = {
 }
@@ -216,12 +216,12 @@ class RemoteCard extends Polymer.Element {
                     <div class="left_buttons">
                         <template is="dom-repeat" items="[[config.left_buttons]]" as="entity">
                             <template is="dom-if" if="[[isentity(entity)]]" as="entity">
-                                <paper-button on-tap="bcall" on-dblclick="dbcall">
+                                <paper-button on-tap="bcall" on-click="bcall" on-dblclick="dbcall">
                                     <state-badge state-obj="[[getstate(hass,entity)]]" hass="[[hass]]" class="lbicon"></state-badge>
                                 </paper-button>
                             </template>   
                             <template is="dom-if" if="[[ismqtt(entity)]]" as="entity">
-                                <paper-button on-tap="bcall" on-dblclick="dbcall">
+                                <paper-button on-tap="bcall" on-click="bcall" on-dblclick="dbcall">
                                     <div class="lbicon">
                                         <ha-icon class="ha-icon" data-state="on" icon="[[geticon(hass,entity)]]"></ha-icon>
                                     </div>
@@ -260,7 +260,12 @@ class RemoteCard extends Polymer.Element {
     }
 
     getDstate(hass, entity) {
-        return hass.states[entity].state;
+        if(entity){
+            return hass.states[entity].state;
+        }else{
+            return "nostate";
+        }
+        
     }
     getstate(hass, entity) {
         return hass.states[entity]
