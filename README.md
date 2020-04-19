@@ -4,7 +4,7 @@
  * @Description   : 
  * @Date          : 2019-10-31 12:03:02
  * @LastEditors   : fineemb
- * @LastEditTime  : 2020-02-10 19:23:47
+ * @LastEditTime  : 2020-04-19 23:53:11
  -->
 lovelace-remote-card
 ================================================
@@ -58,13 +58,10 @@ resources:
                           topic: homeassistant/remote/JMGO
                           payload: "menu"
                           icon: mdi:menu 
-                        - entity: qmtt.volmin
-                          topic: homeassistant/remote/JMGO
-                          payload: volmin
+                        - entity: script.vacuum_office
                           icon: mdi:volume-minus 
-                        - entity: qmtt.volmax
-                          topic: homeassistant/remote/JMGO
-                          payload: "volmax"
+                        - entity: switch.ban_gong_shi_1
+                          server: toggle
                           icon: mdi:volume-plus
 ```
 ## 属性
@@ -75,6 +72,6 @@ resources:
   * `left` 左
   * `right` 右
   * `ok` 确认
-- `left_buttons` 左侧按钮支持`mqtt`,`script`和`switch` 可以添加任意数量,但是建议在6或者8个,为的是UI的和谐.`mqtt`格式严格按照示例
+- `left_buttons` 左侧按钮支持`mqtt`,`script`和`switch` 可以添加任意数量,但是建议在6或者8个,为的是UI的和谐. 格式严格按照示例
 - `vibrate` (选项)设置按钮震动反馈是否开启True/False
 - `entity` (选项) 可以指定设备的追踪ID,一般是路由器追踪,判断电视是否在线
