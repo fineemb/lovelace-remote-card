@@ -9,7 +9,7 @@
 lovelace-remote-card
 ================================================
 
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/hacs/integration)
 
 这是一个通用的电视(机顶盒)遥控器卡片, 可以自定义设置额外的按钮
 
